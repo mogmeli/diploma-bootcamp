@@ -2,8 +2,8 @@ package com.example.obterdiploma.rest.controller.form;
 
 import com.example.obterdiploma.rest.model.Diploma;
 import com.example.obterdiploma.rest.model.Subject;
-import com.sun.istack.NotNull;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
