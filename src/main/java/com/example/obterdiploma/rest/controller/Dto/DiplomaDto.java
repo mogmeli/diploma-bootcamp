@@ -2,19 +2,16 @@ package com.example.obterdiploma.rest.controller.Dto;
 
 import com.example.obterdiploma.rest.model.Diploma;
 
-import java.lang.reflect.Array;
-import java.util.List;
-
 public class DiplomaDto {
 
     private final String message;
     private final double average;
-    private final AlunoDto student;
+    private final StudentDto student;
 
     public DiplomaDto(Diploma diploma) {
         message = diploma.getMensagem();
         average = diploma.getMedia();
-        student = new AlunoDto(diploma);
+        student = new StudentDto(diploma);
     }
 
     public String getMessage() {
@@ -25,7 +22,7 @@ public class DiplomaDto {
         return average;
     }
 
-    public AlunoDto getStudent() {
+    public StudentDto getStudent() {
         return student;
     }
 }

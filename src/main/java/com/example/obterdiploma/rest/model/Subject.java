@@ -6,23 +6,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Materia {
+public class Subject {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long idMateria;
+    Long idSubject;
     String subject;
     double note;
 
-    public Materia() {
+    public Subject() {
     }
 
 
-    public Long getIdMateria() {
-        return idMateria;
+    public Long getIdSubject() {
+        return idSubject;
     }
 
-    public void setIdMateria(Long idMateria) {
-        this.idMateria = idMateria;
+    public void setIdSubject(Long idMateria) {
+        this.idSubject = idMateria;
     }
 
     public double getNote() {

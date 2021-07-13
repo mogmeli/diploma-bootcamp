@@ -1,17 +1,16 @@
 package com.example.obterdiploma.rest.controller.Dto;
 
 import com.example.obterdiploma.rest.model.Diploma;
-import com.example.obterdiploma.rest.model.Materia;
+import com.example.obterdiploma.rest.model.Subject;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class AlunoDto {
+public class StudentDto {
 
     String name;
-    List<Materia> subjects; //TODO: Use MateriaDto and not show field Id.
+    List<Subject> subjects; //TODO: Use SubjectDto and not show field Id.
 
-    public AlunoDto(Diploma diploma){
+    public StudentDto(Diploma diploma){
         name = diploma.getNomeAluno();
         subjects = diploma.getMaterias();
     }
@@ -20,7 +19,7 @@ public class AlunoDto {
         return name;
     }
 
-    public List<Materia> getSubjects() {
+    public List<Subject> getSubjects() {
         return subjects;
     }
 

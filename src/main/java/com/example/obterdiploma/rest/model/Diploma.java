@@ -12,14 +12,14 @@ public class Diploma {
     String mensagem;
     double media;
     @OneToMany(cascade = CascadeType.ALL) //TODO: Remove cascade and save Subjects before the .save(diploma) on controller.
-    List<Materia> materias;
+    List<Subject> subjects;
 
     public Diploma(){
     }
 
-    public Diploma(String name, List<Materia> subjects) {
+    public Diploma(String name, List<Subject> subjects) {
         this.nomeAluno = name;
-        this.materias = subjects;
+        this.subjects = subjects;
     }
 
     public Long getIdDiploma() {
@@ -54,11 +54,11 @@ public class Diploma {
         this.media = media;
     }
 
-    public List<Materia> getMaterias() {
-        return materias;
+    public List<Subject> getMaterias() {
+        return subjects;
     }
 
-    public void setMaterias(List<Materia> materias) {
-        this.materias = materias;
+    public void setMaterias(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 }
