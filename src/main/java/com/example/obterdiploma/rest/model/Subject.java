@@ -16,6 +16,10 @@ public class Subject {
     public Subject() {
     }
 
+    public Subject(String subject, double note) {
+        this.subject = subject;
+        this.note = note;
+    }
 
     public Long getIdSubject() {
         return idSubject;
