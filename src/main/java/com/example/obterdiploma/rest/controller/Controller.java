@@ -30,8 +30,7 @@ public class Controller {
         diplomaService.save(diploma);
         URI uri = uriBuilder.path("/aluno/{id}").buildAndExpand(diploma.getIdDiploma()).toUri();
 
-        return ResponseEntity.created(uri).body(new DiplomaDto(diploma));
-
+        return ResponseEntity.ok().body(new DiplomaDto(diploma));
     }
 
     @GetMapping("/all")

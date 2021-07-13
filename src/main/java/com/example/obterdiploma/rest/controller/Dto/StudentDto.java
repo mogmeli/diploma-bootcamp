@@ -8,18 +8,17 @@ import java.util.List;
 public class StudentDto {
 
     String name;
-    List<Subject> subjects; //TODO: Use SubjectDto and not show field Id.
+    List<SubjectDto> subjects;
 
-    public StudentDto(Diploma diploma){
+    public StudentDto(Diploma diploma) {
         name = diploma.getNomeAluno();
-        subjects = diploma.getMaterias();
+        subjects = SubjectDto.convert(diploma.getMaterias());
     }
-
     public String getName() {
         return name;
     }
 
-    public List<Subject> getSubjects() {
+    public List<SubjectDto> getSubjects() {
         return subjects;
     }
 

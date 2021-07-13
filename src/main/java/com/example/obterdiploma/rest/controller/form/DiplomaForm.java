@@ -4,10 +4,12 @@ import com.example.obterdiploma.rest.model.Diploma;
 import com.example.obterdiploma.rest.model.Subject;
 import com.sun.istack.NotNull;
 
+import javax.validation.constraints.Size;
 import java.util.List;
 
 public class DiplomaForm {
     @NotNull
+    @Size(min=8, max=50)
     String name;
     @NotNull
     List<Subject> subjects;

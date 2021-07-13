@@ -10,12 +10,20 @@ public class SubjectDto {
     String subject;
     double note;
 
+    public String getSubject() {
+        return subject;
+    }
+
+    public double getNote() {
+        return note;
+    }
+
     public SubjectDto(Subject subject){
         this.subject = subject.getSubject();
         note = subject.getNote();
     }
 
-    public List<SubjectDto> convert(List<Subject> lista){
+    public static List<SubjectDto> convert(List<Subject> lista){
         return lista.stream().map(SubjectDto::new).collect(Collectors.toList());
     }
 }

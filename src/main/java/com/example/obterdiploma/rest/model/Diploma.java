@@ -11,7 +11,7 @@ public class Diploma {
     String nomeAluno;
     String mensagem;
     double media;
-    @OneToMany(cascade = CascadeType.ALL) //TODO: Remove cascade and save Subjects before the .save(diploma) on controller.
+    @OneToMany(cascade = CascadeType.ALL)
     List<Subject> subjects;
 
     public Diploma(){
